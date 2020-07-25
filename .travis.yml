@@ -10,10 +10,10 @@ script:
   - docker run fayosaadi/react-test yarn test:ci
 
 after_success:
-  - docker build -t fayosaadi/multi-client -f ./client  ./client
-  - docker build -t fayosaadi/multi-nginx -f ./nginx  ./nginx
-  - docker build -t fayosaadi/multi-server -f ./server  ./server
-  - docker build -t fayosaadi/multi-worker -f ./worker  ./worker
+  - docker build -t fayosaadi/multi-client -f ./client
+  - docker build -t fayosaadi/multi-nginx -f ./nginx
+  - docker build -t fayosaadi/multi-server -f ./server
+  - docker build -t fayosaadi/multi-worker -f ./worker
 #
 ## Log in to docker CLI
 #- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
