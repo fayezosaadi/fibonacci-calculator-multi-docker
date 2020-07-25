@@ -10,18 +10,18 @@ script:
   - docker run fayosaadi/react-test yarn test:ci
 
 after_success:
-  - docker build -t fayosaadi/mutli-client -f ./client
-  - docker build -t fayosaadi/mutli-nginx -f ./nginx
-  - docker build -t fayosaadi/mutli-server -f ./server
-  - docker build -t fayosaadi/mutli-worker -f ./worker
+  - docker build -t fayosaadi/multi-client -f ./client  ./client
+  - docker build -t fayosaadi/multi-nginx -f ./nginx  ./nginx
+  - docker build -t fayosaadi/multi-server -f ./server  ./server
+  - docker build -t fayosaadi/multi-worker -f ./worker  ./worker
 #
 ## Log in to docker CLI
 #- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 #
 ## Push images to docker hub
-#- docker push fayosaadi/mutli-client
-#- docker push fayosaadi/mutli-nginx
-#- docker push fayosaadi/mutli-server
-#- docker push fayosaadi/mutli-worker
+#- docker push fayosaadi/multi-client
+#- docker push fayosaadi/multi-nginx
+#- docker push fayosaadi/multi-server
+#- docker push fayosaadi/multi-worker
 
 
