@@ -21,7 +21,6 @@ after_success:
   - docker push fayosaadi/multi-worker
 
 deploy:
-  edge: true
   provider: elasticbeanstalk
   region: us-east-2
   app: fibonacci-calculator-multi-docker
