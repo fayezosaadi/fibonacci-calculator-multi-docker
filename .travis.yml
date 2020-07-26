@@ -23,10 +23,11 @@ after_success:
 deploy:
   edge: true
   provider: elasticbeanstalk
-  region: "us-east-2"
-  app: "fibonacci-calculator-multi-docker"
-  env: "FibonacciCalculatorMultiDocker-env"
-  bucket: "elasticbeanstalk-us-east-2-786796795325"
+  region: us-east-2
+  app: fibonacci-calculator-multi-docker
+  env: FibonacciCalculatorMultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-2-786796795325
+  bucket_path: fibonacci-calculator-multi-docker
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: $AWS_SECRET_KEY
   on:
