@@ -24,7 +24,7 @@ deploy:
   provider: elasticbeanstalk
   region: us-east-2
   app: fibonacci-calculator-multi-docker
-  env: FibonacciCalculatorMultiDocker-env
+  env: FibonacciCalculatorMultiDocker-env-1
   bucket_name: elasticbeanstalk-us-east-2-786796795325
   bucket_path: fibonacci-calculator-multi-docker
   access_key_id: $AWS_ACCESS_KEY
