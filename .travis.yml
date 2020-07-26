@@ -16,8 +16,9 @@ after_success:
   - docker build -t fayosaadi/multi-worker -f ./worker/Dockerfile ./worker
 #
 ## Log in to docker CLI
-echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-#
+if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
+  echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+fi
 ## Push images to docker hub
 #- docker push fayosaadi/multi-client
 #- docker push fayosaadi/multi-nginx
