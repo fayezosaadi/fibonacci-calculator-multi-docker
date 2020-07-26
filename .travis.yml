@@ -14,6 +14,7 @@ after_success:
   - docker build -t fayosaadi/multi-nginx -f ./nginx/Dockerfile ./nginx
   - docker build -t fayosaadi/multi-server -f ./server/Dockerfile ./server
   - docker build -t fayosaadi/multi-worker -f ./worker/Dockerfile ./worker
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 #
 ## Log in to docker CLI
 #if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" ]]; then
