@@ -11,7 +11,7 @@ function App() {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Link to="/">Fibonacci calculator</Link>
+          <Link to="/">Fibonacci Calculator 🙌🏻 </Link>
           <Link to="otherpage">Other Page!</Link>
         </header>
         <div>
